@@ -13,7 +13,7 @@ a{text-decoration:none;color:inherit}
 
 .navbar{
 position:fixed;top:0;width:100%;z-index:1000;
-background:rgba(255,255,255,.9);backdrop-filter:blur(16px);
+background:rgba(255,255,255,.92);backdrop-filter:blur(16px);
 border-bottom:1px solid #e5e7eb
 }
 .nav-content{
@@ -49,14 +49,45 @@ padding:15px 26px;border-radius:12px;font-weight:900;transition:.25s;display:inl
 .btn-outline{border:1px solid #2563eb;color:#2563eb;background:white}
 .btn:hover{transform:translateY(-3px)}
 
-.laura-area{position:relative;text-align:center}
-.laura-img{max-height:620px;max-width:100%;filter:drop-shadow(0 20px 40px rgba(15,23,42,.18))}
-.speech{
-position:absolute;left:3%;top:14%;
-background:#fff;border:1px solid #dbeafe;padding:20px;border-radius:22px;text-align:left;
-box-shadow:0 18px 50px rgba(37,99,235,.15)
+.laura-area{
+position:relative;
+text-align:center;
+padding-right:20px;
 }
-.speech strong{color:#2563eb;font-size:24px}
+.laura-img{
+max-height:600px;
+max-width:100%;
+position:relative;
+right:-25px;
+filter:drop-shadow(0 20px 40px rgba(15,23,42,.18));
+z-index:2;
+}
+.speech{
+position:absolute;
+left:-55px;
+top:22%;
+background:#fff;
+border:1px solid #dbeafe;
+padding:18px 22px;
+border-radius:18px;
+text-align:left;
+box-shadow:0 15px 40px rgba(0,0,0,.10);
+max-width:240px;
+z-index:3;
+}
+.speech strong{color:#2563eb;font-size:22px}
+.speech::after{
+content:"";
+position:absolute;
+right:-9px;
+top:50%;
+width:18px;
+height:18px;
+background:#fff;
+transform:rotate(45deg);
+border-top:1px solid #dbeafe;
+border-right:1px solid #dbeafe;
+}
 
 .stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
 .stat{
@@ -90,8 +121,17 @@ ul{padding-left:20px}
 position:fixed;right:24px;bottom:24px;width:315px;background:#fff;color:#0f172a;
 border-radius:24px;overflow:hidden;z-index:2000;box-shadow:0 25px 80px rgba(15,23,42,.22);border:1px solid #e5e7eb
 }
-.chat-head{background:#0f172a;color:#fff;padding:14px;display:flex;align-items:center;gap:10px}
-.chat-head img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.chat-head{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:#fff;padding:14px;display:flex;align-items:center;gap:10px
+}
+.chat-avatar{
+width:44px;
+height:44px;
+border-radius:50%;
+object-fit:cover;
+object-position:top;
+}
 .online{color:#22c55e}
 .chat-body{padding:18px}
 .chat-body p{background:#f1f5f9;padding:13px;border-radius:14px;margin-bottom:12px;color:#334155}
@@ -116,6 +156,7 @@ footer{padding:28px;text-align:center;color:#64748b;background:#f8fbff;border-to
 .hero-content,.cta-box{grid-template-columns:1fr}
 .menu{display:none}
 .speech{position:relative;left:auto;top:auto;margin-bottom:18px}
+.laura-img{right:0;max-height:520px}
 .chat-laura{width:285px;right:14px;bottom:14px}
 }
 </style>
@@ -271,7 +312,7 @@ footer{padding:28px;text-align:center;color:#64748b;background:#f8fbff;border-to
 
 <div class="chat-laura">
   <div class="chat-head">
-    <img src="laura.png" alt="Laura">
+    <img src="laura.png" class="chat-avatar" alt="Laura">
     <div><strong>Laura</strong><br><small><span class="online">●</span> Online</small></div>
   </div>
 

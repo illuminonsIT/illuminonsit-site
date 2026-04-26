@@ -6,22 +6,24 @@
 <title>ILLUMINONS IT</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#020617;color:#fff}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
 
 /* NAV */
 .navbar{
 position:fixed;width:100%;top:0;
-background:#020617d9;padding:15px 30px;
+background:rgba(2,6,23,.9);
+padding:16px 30px;
 display:flex;justify-content:space-between;align-items:center;
-z-index:1000;border-bottom:1px solid #ffffff10
+border-bottom:1px solid #ffffff10;
+z-index:1000
 }
+.brand{display:flex;align-items:center;gap:12px;font-weight:bold}
 .logo-navbar{
 width:60px;height:60px;border-radius:12px;
 box-shadow:0 0 25px #38bdf8
 }
-.brand{display:flex;align-items:center;gap:10px;font-weight:bold}
 .menu{display:flex;gap:20px}
 .menu a{color:#ccc}
 .menu a:hover{color:#38bdf8}
@@ -32,39 +34,83 @@ height:100vh;display:flex;align-items:center;
 padding:120px 40px;
 background:linear-gradient(135deg,#020617,#0f172a,#111827)
 }
-.hero h1{font-size:50px}
+
+.hero h1{
+font-size:50px;line-height:1.1
+}
+
 .gradient{
 color:#22c55e
 }
+
+.hero p{
+margin:20px 0;color:#cbd5e1
+}
+
+.buttons{
+display:flex;gap:12px
+}
+
 .btn{
-padding:12px 20px;border-radius:8px;
-cursor:pointer;font-weight:bold;margin-top:15px
-}
-.btn-primary{background:#22c55e}
-.btn-outline{border:1px solid #38bdf8;color:#38bdf8}
-
-/* POPUP */
-.popup{
-position:fixed;top:0;left:0;width:100%;height:100%;
-background:#000000c9;
-display:none;justify-content:center;align-items:center;
-z-index:2000
-}
-.popup-box{
-background:#0f172a;padding:30px;border-radius:15px;
-width:90%;max-width:400px
-}
-.input{
-width:100%;padding:12px;margin-top:10px;
-border-radius:8px;border:1px solid #ffffff20;
-background:#020617;color:#fff
+padding:14px 22px;border-radius:10px;
+font-weight:bold;cursor:pointer;transition:.2s
 }
 
-/* WHATS FLOAT */
+.btn-whatsapp{
+background:#22c55e;
+box-shadow:0 0 20px #22c55e55
+}
+
+.btn-outline{
+border:1px solid #38bdf8;color:#38bdf8
+}
+
+.btn:hover{
+transform:translateY(-2px)
+}
+
+/* SEÇÕES */
+section{
+padding:80px 40px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+
+.card{
+background:#0f172a;
+padding:25px;
+border-radius:15px;
+transition:.2s
+}
+
+.card:hover{
+transform:translateY(-5px)
+}
+
+.card h3{
+color:#38bdf8;margin-bottom:10px
+}
+
+/* FOOTER */
+footer{
+text-align:center;padding:20px;
+background:#020617;color:#94a3b8
+}
+
+/* BOTÃO FLUTUANTE */
 .whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#22c55e;padding:15px;border-radius:50%;
-font-weight:bold
+position:fixed;
+right:20px;
+bottom:20px;
+background:#22c55e;
+padding:16px 18px;
+border-radius:50%;
+font-weight:bold;
+box-shadow:0 0 20px #22c55e55
 }
 </style>
 </head>
@@ -79,8 +125,8 @@ font-weight:bold
   </div>
 
   <div class="menu">
-    <a href="#">Serviços</a>
-    <a href="#">Contato</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
   </div>
 </div>
 
@@ -92,71 +138,60 @@ font-weight:bold
       <span class="gradient">automações inteligentes</span>
     </h1>
 
-    <p>Chatbots, integrações e automação com n8n.</p>
+    <p>
+      Chatbots, integrações e automação com n8n para escalar sua empresa.
+    </p>
 
-    <div>
-      <button class="btn btn-primary" onclick="abrirPopup()">
-        Solicitar proposta
-      </button>
+    <div class="buttons">
+      <a class="btn btn-whatsapp" href="https://wa.me/5519992430009" target="_blank">
+        Fazer orçamento
+      </a>
+
+      <a class="btn btn-outline" href="https://wa.me/5519992430009" target="_blank">
+        WhatsApp
+      </a>
     </div>
   </div>
 </div>
 
-<!-- POPUP FORM -->
-<div class="popup" id="popup">
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <h2>O que fazemos</h2>
 
-  <div class="popup-box">
+  <div class="cards">
+    <div class="card">
+      <h3>Chatbots</h3>
+      <p>Automação de atendimento com n8n.</p>
+    </div>
 
-    <h2>Solicitar proposta</h2>
+    <div class="card">
+      <h3>Integrações</h3>
+      <p>Conectamos APIs e sistemas.</p>
+    </div>
 
-    <input class="input" id="nome" placeholder="Seu nome">
-    <input class="input" id="email" placeholder="Seu e-mail">
-    <input class="input" id="telefone" placeholder="WhatsApp">
-    <textarea class="input" id="mensagem" placeholder="O que você precisa?"></textarea>
-
-    <button class="btn btn-primary" onclick="enviarWhats()">
-      Enviar
-    </button>
-
-    <button class="btn btn-outline" onclick="fecharPopup()">
-      Fechar
-    </button>
-
+    <div class="card">
+      <h3>Automação</h3>
+      <p>Elimine tarefas manuais.</p>
+    </div>
   </div>
+</section>
 
-</div>
+<!-- CONTATO -->
+<section id="contato">
+  <h2>Contato</h2>
 
-<!-- WHATS FLOAT -->
-<a class="whatsapp" href="https://wa.me/5519992430009">W</a>
+  <p>Email: Illuminonsit@icloud.com</p>
+  <p>WhatsApp: (19) 99243-0009</p>
+</section>
 
-<script>
-function abrirPopup(){
-  document.getElementById("popup").style.display="flex"
-}
+<footer>
+© 2026 ILLUMINONS IT — Lucas C Sousa
+</footer>
 
-function fecharPopup(){
-  document.getElementById("popup").style.display="none"
-}
-
-function enviarWhats(){
-
-  let nome = document.getElementById("nome").value
-  let email = document.getElementById("email").value
-  let telefone = document.getElementById("telefone").value
-  let mensagem = document.getElementById("mensagem").value
-
-  let texto = `Olá, vim pelo site da Illuminons IT!
-
-Nome: ${nome}
-Email: ${email}
-Telefone: ${telefone}
-Mensagem: ${mensagem}`
-
-  let url = "https://wa.me/5519992430009?text=" + encodeURIComponent(texto)
-
-  window.open(url, "_blank")
-}
-</script>
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp" href="https://wa.me/5519992430009" target="_blank">
+  W
+</a>
 
 </body>
 </html>

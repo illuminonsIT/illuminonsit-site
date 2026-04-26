@@ -3,330 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ILLUMINONS IT | Automação, Chatbots e Tráfego Pago</title>
+<title>ILLUMINONS IT</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#f8fbff;color:#0f172a;line-height:1.6}
-a{text-decoration:none;color:inherit}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f8fbff;color:#0f172a}
 
+/* NAV */
 .navbar{
-position:fixed;top:0;width:100%;z-index:1000;
-background:rgba(255,255,255,.92);backdrop-filter:blur(16px);
-border-bottom:1px solid #e5e7eb
+position:fixed;width:100%;top:0;
+background:#fff;
+border-bottom:1px solid #e5e7eb;
+z-index:1000;
 }
 .nav-content{
-max-width:1200px;margin:auto;padding:16px 24px;
+max-width:1200px;margin:auto;
+padding:16px;
 display:flex;justify-content:space-between;align-items:center
 }
-.brand{display:flex;align-items:center;gap:14px;font-weight:900}
-.logo-navbar{width:58px;height:58px;border-radius:14px;object-fit:cover;box-shadow:0 8px 30px rgba(37,99,235,.18)}
-.menu{display:flex;gap:26px;color:#334155;font-weight:600}
-.menu a:hover{color:#2563eb}
+.logo-navbar{width:55px;border-radius:12px}
+.menu{display:flex;gap:20px}
 
+/* HERO */
 .hero{
-min-height:100vh;padding:140px 24px 60px;
-background:radial-gradient(circle at 80% 25%,#dbeafe 0%,transparent 35%),linear-gradient(135deg,#ffffff,#f8fbff)
+padding:140px 20px 60px;
+background:linear-gradient(135deg,#fff,#f1f5f9)
 }
 .hero-content{
 max-width:1200px;margin:auto;
-display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center
+display:grid;grid-template-columns:1fr 1fr;
+align-items:center;gap:40px
 }
-.badge{
-display:inline-block;padding:9px 16px;border-radius:999px;
-background:#eaf2ff;color:#2563eb;font-weight:800;font-size:13px;
-margin-bottom:24px;letter-spacing:.5px
+h1{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px
 }
-h1{font-size:clamp(40px,6vw,68px);line-height:1.08;margin-bottom:22px;color:#0f172a}
-.gradient{background:linear-gradient(90deg,#16a34a,#2563eb);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:19px;color:#475569;max-width:650px;margin-bottom:30px}
-.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.gradient{
+background:linear-gradient(90deg,#16a34a,#2563eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.buttons{display:flex;gap:12px;margin-top:20px}
 .btn{
-padding:15px 26px;border-radius:12px;font-weight:900;transition:.25s;display:inline-flex;align-items:center;justify-content:center
+padding:14px 24px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
 }
-.btn-primary{background:#16a34a;color:#fff;box-shadow:0 16px 40px rgba(22,163,74,.25)}
-.btn-outline{border:1px solid #2563eb;color:#2563eb;background:white}
-.btn:hover{transform:translateY(-3px)}
+.btn-primary{
+background:#16a34a;color:#fff;
+}
+.btn-outline{
+border:1px solid #2563eb;color:#2563eb;
+}
 
-.laura-area{
-position:relative;
-text-align:center;
-padding-right:20px;
-}
+/* LAURA */
+.laura-area{position:relative;text-align:center}
 .laura-img{
-max-height:600px;
-max-width:100%;
+max-height:550px;
 position:relative;
-right:-25px;
-filter:drop-shadow(0 20px 40px rgba(15,23,42,.18));
-z-index:2;
+right:-20px;
 }
+
+/* BALÃO */
 .speech{
 position:absolute;
-left:-55px;
-top:22%;
+left:-40px;
+top:25%;
 background:#fff;
-border:1px solid #dbeafe;
-padding:18px 22px;
-border-radius:18px;
-text-align:left;
-box-shadow:0 15px 40px rgba(0,0,0,.10);
-max-width:240px;
-z-index:3;
+padding:15px 18px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
-.speech strong{color:#2563eb;font-size:22px}
-.speech::after{
-content:"";
-position:absolute;
-right:-9px;
-top:50%;
-width:18px;
-height:18px;
+.speech strong{color:#2563eb}
+
+/* CHAT SAAS */
+.chat{
+position:fixed;
+right:20px;
+bottom:20px;
+width:300px;
 background:#fff;
-transform:rotate(45deg);
-border-top:1px solid #dbeafe;
-border-right:1px solid #dbeafe;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,.2);
+overflow:hidden;
+z-index:2000;
 }
 
-.stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
-.stat{
-display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e5e7eb;
-padding:14px 18px;border-radius:16px;color:#334155;box-shadow:0 10px 35px rgba(15,23,42,.06)
+.chat-header{
+background:#0f172a;
+color:#fff;
+padding:12px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-section{padding:90px 24px}
-.container{max-width:1200px;margin:auto}
-.section-kicker{text-align:center;color:#2563eb;font-weight:900;letter-spacing:3px;font-size:13px}
-.section-title{text-align:center;font-size:clamp(30px,4vw,44px);margin:8px 0 12px}
-.section-desc{text-align:center;color:#64748b;margin-bottom:45px;font-size:18px}
-.cards,.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card,.plano{
-background:#fff;border:1px solid #e5e7eb;border-radius:24px;padding:30px;
-box-shadow:0 18px 45px rgba(15,23,42,.07);transition:.25s
-}
-.card:hover,.plano:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(37,99,235,.12)}
-.icon{
-width:56px;height:56px;border-radius:18px;background:#eff6ff;color:#2563eb;
-display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px
-}
-.card h3,.plano h3{font-size:23px;margin-bottom:10px}
-.card p,.plano li,.plano p{color:#475569}
-.dark-light{background:#eef6ff}
-.preco{font-size:30px;font-weight:900;color:#16a34a;margin:12px 0}
-.destaque{border:2px solid #16a34a}
-ul{padding-left:20px}
-
-.chat-laura{
-position:fixed;right:24px;bottom:24px;width:315px;background:#fff;color:#0f172a;
-border-radius:24px;overflow:hidden;z-index:2000;box-shadow:0 25px 80px rgba(15,23,42,.22);border:1px solid #e5e7eb
-}
-.chat-head{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:#fff;padding:14px;display:flex;align-items:center;gap:10px
-}
 .chat-avatar{
-width:44px;
-height:44px;
+width:46px;
+height:46px;
 border-radius:50%;
 object-fit:cover;
 object-position:top;
+border:2px solid #22c55e;
+box-shadow:0 0 0 4px rgba(34,197,94,.15);
 }
-.online{color:#22c55e}
-.chat-body{padding:18px}
-.chat-body p{background:#f1f5f9;padding:13px;border-radius:14px;margin-bottom:12px;color:#334155}
+
+.chat-body{
+padding:15px;
+}
+
+.chat-body p{
+background:#f1f5f9;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
 .chat-body a{
-display:block;text-align:center;border:1px solid #2563eb;color:#2563eb;
-padding:10px;border-radius:999px;margin-top:8px;font-weight:800
+display:block;
+margin-top:8px;
+padding:10px;
+text-align:center;
+border:1px solid #2563eb;
+border-radius:20px;
+color:#2563eb;
+font-weight:bold;
+text-decoration:none;
 }
 
-.cta{background:#fff}
-.cta-box{
-max-width:1100px;margin:auto;background:linear-gradient(135deg,#eff6ff,#ffffff);
-border:1px solid #dbeafe;border-radius:28px;padding:42px;
-display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
-box-shadow:0 20px 60px rgba(37,99,235,.1)
-}
-.cta-box h2{font-size:34px;color:#0f172a}
-.cta-box p{color:#475569}
-
-footer{padding:28px;text-align:center;color:#64748b;background:#f8fbff;border-top:1px solid #e5e7eb}
-
+/* MOBILE */
 @media(max-width:900px){
-.hero-content,.cta-box{grid-template-columns:1fr}
-.menu{display:none}
-.speech{position:relative;left:auto;top:auto;margin-bottom:18px}
-.laura-img{right:0;max-height:520px}
-.chat-laura{width:285px;right:14px;bottom:14px}
+.hero-content{grid-template-columns:1fr}
+.laura-img{right:0}
+.speech{position:relative;left:0;margin-bottom:15px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav class="navbar">
   <div class="nav-content">
-    <a class="brand" href="#">
-      <img src="logo.jpeg" class="logo-navbar" alt="Logo ILLUMINONS IT">
-      <span>ILLUMINONS IT</span>
-    </a>
-
+    <img src="logo.jpeg" class="logo-navbar">
     <div class="menu">
-      <a href="#servicos">Serviços</a>
-      <a href="#pacotes">Pacotes</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#contato">Contato</a>
+      <a>Serviços</a>
+      <a>Pacotes</a>
+      <a>Contato</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="hero-content">
-    <div>
-      <span class="badge">AGÊNCIA DE AUTOMAÇÃO • CHATBOTS • TRÁFEGO PAGO</span>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
 
-      <h1>Atraia clientes, automatize processos e <span class="gradient">escale seu negócio.</span></h1>
+<div>
+<h1>
+Atraia clientes, automatize processos e
+<span class="gradient">escale seu negócio.</span>
+</h1>
 
-      <p>
-        Unimos tráfego pago, chatbots e automações com n8n para transformar cliques em clientes
-        e simplificar sua operação.
-      </p>
+<p>Tráfego pago + chatbot + automação para gerar clientes automaticamente.</p>
 
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20e%20quero%20fazer%20um%20orçamento." target="_blank">Fazer orçamento</a>
-        <a class="btn btn-outline" href="#pacotes">Ver pacotes</a>
-      </div>
-
-      <div class="stats">
-        <div class="stat">📈 Mais leads qualificados</div>
-        <div class="stat">🤖 Atendimento automático</div>
-        <div class="stat">⚙️ Processos inteligentes</div>
-      </div>
-    </div>
-
-    <div class="laura-area">
-      <div class="speech">
-        Olá! Eu sou a<br><strong>Laura 👋</strong><br>
-        Como posso ajudar sua empresa hoje?
-      </div>
-
-      <img src="laura.png" class="laura-img" alt="Laura assistente virtual">
-    </div>
-  </div>
-</header>
-
-<section id="servicos">
-  <div class="container">
-    <div class="section-kicker">NOSSOS SERVIÇOS</div>
-    <h2 class="section-title">Soluções completas para seu crescimento</h2>
-    <p class="section-desc">Marketing, automação e tecnologia trabalhando juntos.</p>
-
-    <div class="cards">
-      <div class="card"><div class="icon">📣</div><h3>Tráfego Pago</h3><p>Campanhas no Instagram e Facebook Ads para gerar leads qualificados.</p></div>
-      <div class="card"><div class="icon">💬</div><h3>Chatbots</h3><p>Atendimento 24h no WhatsApp com respostas inteligentes e qualificação de leads.</p></div>
-      <div class="card"><div class="icon">⚙️</div><h3>Automação com n8n</h3><p>Automatizamos processos, integrações e fluxos para ganhar tempo e eficiência.</p></div>
-      <div class="card"><div class="icon">🧩</div><h3>Integrações</h3><p>Conectamos sistemas, APIs, planilhas, CRMs e ferramentas que você já usa.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="pacotes" class="dark-light">
-  <div class="container">
-    <div class="section-kicker">PACOTES</div>
-    <h2 class="section-title">Escolha o plano ideal para sua empresa</h2>
-    <p class="section-desc">Planos pensados para captar, atender e automatizar.</p>
-
-    <div class="planos">
-      <div class="plano">
-        <h3>Starter</h3>
-        <p>A partir de</p>
-        <div class="preco">R$ 900/mês</div>
-        <ul>
-          <li>Gestão básica de tráfego</li>
-          <li>Campanhas Instagram/Facebook</li>
-          <li>Direcionamento para WhatsApp</li>
-          <li>Relatórios mensais</li>
-        </ul>
-        <br>
-        <a class="btn btn-outline" href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20o%20plano%20Starter." target="_blank">Quero esse plano</a>
-      </div>
-
-      <div class="plano destaque">
-        <h3>Growth</h3>
-        <p>A partir de</p>
-        <div class="preco">R$ 1.800/mês</div>
-        <ul>
-          <li>Tráfego pago estratégico</li>
-          <li>Chatbot para WhatsApp</li>
-          <li>Fluxos iniciais com n8n</li>
-          <li>Relatórios e otimizações</li>
-        </ul>
-        <br>
-        <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20quero%20um%20orçamento%20para%20o%20plano%20Growth." target="_blank">Fazer orçamento</a>
-      </div>
-
-      <div class="plano">
-        <h3>Premium</h3>
-        <p>Projeto</p>
-        <div class="preco">Personalizado</div>
-        <ul>
-          <li>Tráfego + chatbot + automação</li>
-          <li>Integrações avançadas</li>
-          <li>Funil completo de vendas</li>
-          <li>Suporte e consultoria</li>
-        </ul>
-        <br>
-        <a class="btn btn-outline" href="https://wa.me/5519992430009?text=Olá,%20quero%20um%20projeto%20Premium%20com%20tráfego,%20chatbot%20e%20automação." target="_blank">Falar com especialista</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais">
-  <div class="container">
-    <div class="section-kicker">DIFERENCIAIS</div>
-    <h2 class="section-title">Por que escolher a ILLUMINONS IT?</h2>
-    <p class="section-desc">Não entregamos apenas anúncio. Entregamos operação inteligente.</p>
-
-    <div class="cards">
-      <div class="card"><div class="icon">🚀</div><h3>Funil completo</h3><p>Do anúncio até o atendimento, tudo conectado para gerar mais oportunidades.</p></div>
-      <div class="card"><div class="icon">📊</div><h3>Foco em resultado</h3><p>Campanhas e automações pensadas para conversas, leads e vendas.</p></div>
-      <div class="card"><div class="icon">🔒</div><h3>Processo profissional</h3><p>Organização, tecnologia e automação para sua empresa crescer com controle.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contato" class="cta">
-  <div class="cta-box">
-    <div>
-      <h2>Pronto para levar sua empresa ao próximo nível?</h2>
-      <p>Fale agora com a nossa equipe e descubra como podemos transformar seu negócio com automação e tráfego pago.</p>
-    </div>
-
-    <div class="buttons">
-      <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20e%20quero%20fazer%20um%20orçamento." target="_blank">Chamar no WhatsApp</a>
-      <a class="btn btn-outline" href="#pacotes">Ver pacotes</a>
-    </div>
-  </div>
-</section>
-
-<div class="chat-laura">
-  <div class="chat-head">
-    <img src="laura.png" class="chat-avatar" alt="Laura">
-    <div><strong>Laura</strong><br><small><span class="online">●</span> Online</small></div>
-  </div>
-
-  <div class="chat-body">
-    <p>Olá! 👋<br>Sou a Laura, assistente virtual da Illuminons IT. Como posso ajudar sua empresa hoje?</p>
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20um%20orçamento." target="_blank">Quero um orçamento</a>
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20os%20serviços." target="_blank">Quero saber sobre serviços</a>
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20falar%20com%20um%20especialista." target="_blank">Falar com especialista</a>
-  </div>
+<div class="buttons">
+<a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá%20quero%20orçamento" target="_blank">Fazer orçamento</a>
+<a class="btn btn-outline">Ver pacotes</a>
+</div>
 </div>
 
-<footer>
-  © 2026 ILLUMINONS IT — CEO Founder Lucas C Sousa
-</footer>
+<div class="laura-area">
+
+<div class="speech">
+Olá! Eu sou a<br>
+<strong>Laura 👋</strong><br>
+Como posso ajudar?
+</div>
+
+<img src="laura.png" class="laura-img">
+
+</div>
+
+</div>
+</section>
+
+<!-- CHAT -->
+<div class="chat">
+
+<div class="chat-header">
+<img src="laura-avatar.png" class="chat-avatar">
+<div>
+<b>Laura</b><br>
+<small style="color:#22c55e">● Online</small>
+</div>
+</div>
+
+<div class="chat-body">
+<p>Olá 👋<br>Sou a Laura da Illuminons IT.</p>
+
+<a href="https://wa.me/5519992430009?text=Quero%20orçamento" target="_blank">
+Quero um orçamento
+</a>
+
+<a href="https://wa.me/5519992430009?text=Quero%20serviços" target="_blank">
+Quero saber mais
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>

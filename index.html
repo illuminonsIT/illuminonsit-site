@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,94 +8,214 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
+    font-family: 'Segoe UI', sans-serif;
+    background: #020617;
     color: white;
-    text-align: center;
 }
 
-header {
-    padding: 50px 20px;
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
-p {
-    color: #cbd5f5;
+.subtitle {
+    color: #94a3b8;
+    font-size: 20px;
+    max-width: 600px;
+}
+
+/* BOTÕES */
+.btn {
+    margin-top: 20px;
+    padding: 14px 25px;
+    background: #22c55e;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #16a34a;
+}
+
+.btn2 {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 20px;
 }
 
 .container {
-    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 10px;
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    margin-top: 20px;
-    background: #22c55e;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #38bdf8;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background: #020617;
 }
 
 footer {
-    margin-top: 40px;
+    text-align: center;
     padding: 20px;
-    background: #020617;
+    background: black;
+    color: #94a3b8;
 }
 </style>
 
 </head>
+
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
+    <img src="logo.jpeg" class="logo">
+
     <h1>ILLUMINONS IT</h1>
-    <p>Soluções em automação, chatbot e DevOps</p>
-</header>
 
-<div class="container">
+    <p class="subtitle">
+        Automação inteligente com chatbot, integrações e DevOps para escalar seu negócio.
+    </p>
 
-    <div class="card">
-        <h2>🚀 Chatbot com n8n</h2>
-        <p>Automatize atendimentos, reduza custos e integre seus sistemas com inteligência.</p>
-    </div>
+    <a class="btn" href="https://wa.me/5519992430009" target="_blank">
+        Falar no WhatsApp
+    </a>
 
-    <div class="card">
-        <h2>⚡ O que fazemos</h2>
-        <p>
-        • Chatbots inteligentes<br>
-        • Integrações com APIs<br>
-        • Automação de processos<br>
-        • DevOps e Cloud
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>📞 Contato</h2>
-        <p>Email: Illuminonsit@icloud.com</p>
-        <p>WhatsApp: (19) 99243-0009</p>
-
-        <a class="btn" href="https://wa.me/5519992430009" target="_blank">
-            Falar no WhatsApp
-        </a>
-    </div>
-
+    <a class="btn btn2" href="mailto:Illuminonsit@icloud.com">
+        Enviar E-mail
+    </a>
 </div>
 
+<!-- SERVIÇOS -->
+<section>
+    <div class="container">
+        <h2 class="title">O que fazemos</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Chatbots com n8n</h3>
+                <p>Automatização de atendimento, abertura de chamados e fluxos inteligentes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integrações</h3>
+                <p>Conectamos APIs, sistemas internos, WhatsApp, Teams e bancos de dados.</p>
+            </div>
+
+            <div class="card">
+                <h3>Automação</h3>
+                <p>Redução de tarefas manuais com processos automatizados ponta a ponta.</p>
+            </div>
+
+            <div class="card">
+                <h3>DevOps</h3>
+                <p>Pipelines, cloud, deploy e boas práticas para escalar sua operação.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROPOSTA -->
+<section style="background:#0b1220;">
+    <div class="container">
+        <h2 class="title">Solução de Chatbot</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Funcionalidades</h3>
+                <p>
+                ✔ Atendimento 24/7<br>
+                ✔ Menu automatizado<br>
+                ✔ Abertura de chamados<br>
+                ✔ Integração com sistemas
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Benefícios</h3>
+                <p>
+                ✔ Redução de custos<br>
+                ✔ Mais produtividade<br>
+                ✔ Atendimento rápido<br>
+                ✔ Escalabilidade
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Arquitetura</h3>
+                <p>
+                Usuário → Canal → API → n8n → Sistemas → Resposta
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+    <div class="container">
+        <h2 class="title">Vamos automatizar seu negócio?</h2>
+
+        <a class="btn" href="https://wa.me/5519992430009" target="_blank">
+            Falar agora no WhatsApp
+        </a>
+    </div>
+</section>
+
 <footer>
-    © 2026 ILLUMINONS IT
+    © 2026 ILLUMINONS IT — CEO Founder Lucas C Sousa
 </footer>
 
 </body>

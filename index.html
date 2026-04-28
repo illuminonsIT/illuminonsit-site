@@ -11,16 +11,37 @@ html{scroll-behavior:smooth}
 body{background:#020617;color:#fff;line-height:1.6}
 a{text-decoration:none;color:inherit}
 
-.navbar{position:fixed;top:0;width:100%;z-index:1000;background:rgba(2,6,23,.92);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav-content{max-width:1200px;margin:auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
-.brand{display:flex;align-items:center;gap:14px;font-weight:800}
-.logo-navbar{width:120px;height:100px;border-radius:35px;object-fit:cover;box-shadow:0 0 60px rgba(56,189,248,.60)}
+.navbar{
+position:fixed;top:0;width:100%;z-index:1000;
+background:rgba(2,6,23,.92);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+transition:transform .35s ease;
+}
+.nav-content{
+max-width:1200px;margin:auto;padding:12px 24px;
+display:flex;justify-content:space-between;align-items:center
+}
+.logo-navbar{
+width:90px;height:90px;border-radius:22px;object-fit:cover;
+box-shadow:0 0 45px rgba(56,189,248,.45)
+}
 .menu{display:flex;gap:24px;color:#cbd5e1}
 .menu a:hover{color:#38bdf8}
 
-.hero{min-height:100vh;padding:140px 24px 70px;background:radial-gradient(circle at 70% 30%,rgba(0,120,255,.28),transparent 30%),linear-gradient(135deg,#020617,#0f172a 60%,#020617)}
-.hero-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.badge{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid rgba(56,189,248,.4);color:#38bdf8;margin-bottom:22px}
+.hero{
+min-height:100vh;padding:140px 24px 70px;
+background:radial-gradient(circle at 70% 30%,rgba(0,120,255,.28),transparent 30%),
+linear-gradient(135deg,#020617,#0f172a 60%,#020617)
+}
+.hero-content{
+max-width:1200px;margin:auto;
+display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
+}
+.badge{
+display:inline-block;padding:8px 16px;border-radius:999px;
+border:1px solid rgba(56,189,248,.4);color:#38bdf8;margin-bottom:22px
+}
 h1{font-size:clamp(42px,6vw,70px);line-height:1.05;margin-bottom:22px}
 .gradient{background:linear-gradient(90deg,#22c55e,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{font-size:19px;color:#cbd5e1;margin-bottom:30px;max-width:650px}
@@ -32,7 +53,11 @@ h1{font-size:clamp(42px,6vw,70px);line-height:1.05;margin-bottom:22px}
 
 .laura-area{position:relative;text-align:center}
 .laura-img{max-height:620px;max-width:100%;filter:drop-shadow(0 0 35px rgba(56,189,248,.35))}
-.speech{position:absolute;left:5%;top:12%;background:rgba(15,23,42,.9);border:1px solid rgba(56,189,248,.35);padding:20px;border-radius:22px;text-align:left;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.speech{
+position:absolute;left:5%;top:12%;
+background:rgba(15,23,42,.9);border:1px solid rgba(56,189,248,.35);
+padding:20px;border-radius:22px;text-align:left;box-shadow:0 20px 60px rgba(0,0,0,.35)
+}
 .speech strong{color:#38bdf8;font-size:24px}
 
 .stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:35px;color:#cbd5e1}
@@ -43,7 +68,10 @@ section{padding:90px 24px}
 .section-title{text-align:center;font-size:42px;margin-bottom:12px}
 .section-desc{text-align:center;color:#94a3b8;margin-bottom:45px}
 .cards,.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card,.plano{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:30px;transition:.25s}
+.card,.plano{
+background:#0f172a;border:1px solid rgba(255,255,255,.08);
+border-radius:24px;padding:30px;transition:.25s
+}
 .card:hover,.plano:hover{transform:translateY(-7px);border-color:rgba(56,189,248,.35)}
 .icon{font-size:34px;margin-bottom:15px}
 .card h3,.plano h3{font-size:23px;margin-bottom:10px}
@@ -56,6 +84,16 @@ ul{padding-left:20px}
 .noc{background:#0f172a;color:#fff}
 .noc-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .noc-box{background:#020617;padding:18px;border-radius:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,.08)}
+
+.diagnostico{
+background:linear-gradient(135deg,#022c22,#020617);
+text-align:center
+}
+.diagnostico-box{
+max-width:900px;margin:auto;background:rgba(15,23,42,.9);
+border:1px solid rgba(34,197,94,.35);border-radius:28px;padding:45px;
+box-shadow:0 25px 80px rgba(34,197,94,.12)
+}
 
 .cta{text-align:center;background:#020617}
 footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08)}
@@ -76,6 +114,7 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
 .menu{display:none}
 .speech{position:relative;left:auto;top:auto;margin-bottom:20px}
 .chat-laura{width:280px}
+.logo-navbar{width:76px;height:76px}
 }
 </style>
 </head>
@@ -84,12 +123,13 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
 
 <nav class="navbar">
   <div class="nav-content">
-    <a class="brand" href="#">
-      <img src="logo.png" class="logo-navbar" alt="Logo">
-          </a>
+    <a href="#">
+      <img src="logo.jpeg" class="logo-navbar" alt="Logo">
+    </a>
     <div class="menu">
       <a href="#servicos">Serviços</a>
       <a href="#noc">NOC/COE</a>
+      <a href="#diagnostico">Diagnóstico</a>
       <a href="#pacotes">Pacotes</a>
       <a href="#contato">Contato</a>
     </div>
@@ -104,7 +144,7 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
       <p>Unimos tráfego pago, chatbots e automações com n8n para transformar cliques em clientes e simplificar sua operação.</p>
 
       <div class="buttons">
-        <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20e%20quero%20fazer%20um%20orçamento." target="_blank">Fazer orçamento</a>
+        <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">Diagnóstico gratuito</a>
         <a class="btn btn-outline" href="#pacotes">Ver pacotes</a>
       </div>
 
@@ -118,7 +158,7 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
     <div class="laura-area">
       <div class="speech">
         Olá! Eu sou a<br><strong>Laura 👋</strong><br>
-        Como posso ajudar sua empresa hoje?
+        Posso te ajudar a encontrar oportunidades de automação.
       </div>
       <img src="laura.png" class="laura-img" alt="Laura">
     </div>
@@ -160,6 +200,16 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
   </div>
 </section>
 
+<section id="diagnostico" class="diagnostico">
+  <div class="diagnostico-box">
+    <h2 class="section-title">Diagnóstico gratuito de automação e captação</h2>
+    <p class="section-desc">
+      Analisamos seu atendimento, captação de clientes e processos manuais para identificar oportunidades de automação, tráfego pago e chatbot.
+    </p>
+    <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">Quero meu diagnóstico gratuito</a>
+  </div>
+</section>
+
 <section id="pacotes" class="dark">
   <div class="container">
     <h2 class="section-title">Escolha o plano ideal para sua empresa</h2>
@@ -167,7 +217,7 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
     <div class="planos">
       <div class="plano">
         <h3>Starter</h3>
-        <div class="preco">R$ 450/mês</div>
+        <div class="preco">R$ 900/mês</div>
         <ul>
           <li>Gestão básica de tráfego</li>
           <li>Campanhas Instagram/Facebook</li>
@@ -204,8 +254,8 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
 <section id="contato" class="cta">
   <div class="container">
     <h2 class="section-title">Pronto para levar sua empresa ao próximo nível?</h2>
-    <p class="section-desc">Fale agora com a nossa equipe e descubra como podemos transformar seu negócio.</p>
-    <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20e%20quero%20fazer%20um%20orçamento." target="_blank">Chamar no WhatsApp</a>
+    <p class="section-desc">Comece com um diagnóstico gratuito e descubra onde sua empresa pode vender mais e operar melhor.</p>
+    <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">Quero meu diagnóstico gratuito</a>
   </div>
 </section>
 
@@ -219,9 +269,9 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
   </div>
 
   <div class="chat-body">
-    <p>Olá! Sou a Laura, assistente virtual da Illuminons IT. Como posso ajudar?</p>
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20um%20orçamento." target="_blank">Quero um orçamento</a>
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20os%20serviços." target="_blank">Saber sobre serviços</a>
+    <p>Olá! Sou a Laura. Posso te ajudar a identificar oportunidades de automação e captação?</p>
+    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">Quero diagnóstico gratuito</a>
+    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20tráfego,%20chatbot%20e%20automação." target="_blank">Saber sobre serviços</a>
   </div>
 </div>
 
@@ -243,6 +293,26 @@ function openChat(){
   document.getElementById("chatBox").style.display="block";
   document.getElementById("chatBubble").style.display="none";
 }
+
+setTimeout(function(){
+  document.getElementById("chatBox").style.display="block";
+  document.getElementById("chatBubble").style.display="none";
+}, 5000);
+
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
 </script>
 
 </body>

@@ -64,7 +64,7 @@ color:#38bdf8;margin-bottom:24px;font-weight:700
 }
 
 h1{
-font-size:clamp(48px,5.5vw,72px);
+font-size:clamp(48px,5.2vw,68px);
 line-height:1.08;
 letter-spacing:-.8px;
 margin-bottom:24px;
@@ -80,8 +80,25 @@ background:linear-gradient(90deg,#22c55e,#38bdf8);
 .hero p{
 font-size:18px;
 color:#cbd5e1;
-margin-bottom:32px;
+margin-bottom:26px;
 max-width:560px
+}
+
+.hero-highlights{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-bottom:32px
+}
+
+.hero-highlights div{
+background:rgba(15,23,42,.85);
+border:1px solid rgba(56,189,248,.22);
+color:#cbd5e1;
+padding:12px 16px;
+border-radius:999px;
+font-weight:700;
+box-shadow:0 12px 35px rgba(0,0,0,.18)
 }
 
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
@@ -421,7 +438,7 @@ border:2px solid #22c55e
   <div class="nav-content">
     <a class="brand" href="#">
       <img src="logo.png" class="logo-navbar" alt="Logo ILLUMINONS IT">
-    
+      <span>ILLUMINONS IT</span>
     </a>
 
     <div class="menu">
@@ -439,24 +456,23 @@ border:2px solid #22c55e
       <span class="badge">Agência de Automação • Chatbots • Tráfego Pago</span>
 
       <h1>
-        Atraia clientes,<br>
-        automatize processos e<br>
+        Atraia clientes e<br>
         <span class="gradient">escale seu negócio</span>
       </h1>
 
       <p>
-        Unimos tráfego pago, chatbots e automações com n8n para transformar cliques em clientes e simplificar sua operação.
+        Automatize seu atendimento, gere mais oportunidades e simplifique sua operação com tecnologia aplicada ao crescimento.
       </p>
+
+      <div class="hero-highlights">
+        <div>Captação de leads</div>
+        <div>Atendimento automático</div>
+        <div>Processos inteligentes</div>
+      </div>
 
       <div class="buttons">
         <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20e%20quero%20fazer%20um%20orçamento." target="_blank">Fazer orçamento</a>
         <a class="btn btn-outline" href="#pacotes">Ver pacotes</a>
-      </div>
-
-      <div class="stats">
-        <div class="stat">Mais leads qualificados</div>
-        <div class="stat">Atendimento automático</div>
-        <div class="stat">Processos inteligentes</div>
       </div>
     </div>
 

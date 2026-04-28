@@ -18,103 +18,78 @@ backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,.08);
 transition:transform .35s ease;
 }
-
 .nav-content{
 max-width:1200px;margin:auto;padding:12px 24px;
 display:flex;justify-content:space-between;align-items:center
 }
-
 .logo-navbar{
-width:90px;height:90px;border-radius:22px;object-fit:cover;
+width:86px;height:86px;border-radius:22px;object-fit:cover;
 box-shadow:0 0 45px rgba(56,189,248,.45)
 }
-
 .menu{display:flex;gap:24px;color:#cbd5e1}
 .menu a:hover{color:#38bdf8}
 
 .hero{
 min-height:100vh;
-padding:135px 24px 40px;
+padding:135px 24px 55px;
 background:
-radial-gradient(circle at 72% 38%,rgba(0,120,255,.35),transparent 34%),
+radial-gradient(circle at 72% 42%,rgba(0,120,255,.35),transparent 32%),
 linear-gradient(135deg,#020617,#0f172a 60%,#020617)
 }
-
 .hero-content{
 max-width:1200px;margin:auto;
 display:grid;
-grid-template-columns:470px 1fr;
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:34px;
 align-items:center;
 }
-
 .badge{
 display:inline-block;padding:8px 16px;border-radius:999px;
 border:1px solid rgba(56,189,248,.4);
 color:#38bdf8;margin-bottom:22px
 }
-
 h1{
-font-size:clamp(44px,4.8vw,66px);
-line-height:1.08;
+font-size:clamp(44px,5.3vw,68px);
+line-height:1.06;
 margin-bottom:22px
 }
-
 .gradient{
 background:linear-gradient(90deg,#22c55e,#38bdf8);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent
 }
-
 .hero p{
 font-size:18px;
 color:#cbd5e1;
 margin-bottom:30px;
-max-width:520px
+max-width:620px
 }
-
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
-
 .btn{
-padding:15px 26px;
-border-radius:14px;
-font-weight:800;
-transition:.25s;
-display:inline-block
+padding:15px 26px;border-radius:14px;font-weight:800;
+transition:.25s;display:inline-block
 }
-
-.btn-primary{
-background:#22c55e;
-box-shadow:0 18px 45px rgba(34,197,94,.28)
-}
-
-.btn-outline{
-border:1px solid rgba(56,189,248,.55);
-color:#7dd3fc
-}
-
+.btn-primary{background:#22c55e;box-shadow:0 18px 45px rgba(34,197,94,.28)}
+.btn-outline{border:1px solid rgba(56,189,248,.55);color:#7dd3fc}
 .btn:hover{transform:translateY(-3px)}
 
 .laura-area{
 position:relative;
 display:flex;
-justify-content:flex-end;
+justify-content:center;
 align-items:flex-end;
-min-height:650px;
+min-height:620px;
 }
-
 .laura-img{
-height:720px;
+height:690px;
 width:auto;
 position:relative;
 z-index:2;
-transform:translateX(10px);
 filter:drop-shadow(0 0 60px rgba(56,189,248,.35));
 }
-
 .speech{
 position:absolute;
-left:25px;
+left:0;
 top:155px;
 max-width:330px;
 background:rgba(15,23,42,.95);
@@ -125,7 +100,6 @@ text-align:left;
 box-shadow:0 20px 60px rgba(0,0,0,.38);
 z-index:3;
 }
-
 .speech::after{
 content:"";
 position:absolute;
@@ -136,52 +110,27 @@ border-width:14px;
 border-style:solid;
 border-color:transparent transparent transparent rgba(15,23,42,.95);
 }
-
-.speech strong{
-color:#38bdf8;
-font-size:24px
-}
+.speech strong{color:#38bdf8;font-size:24px}
 
 .stats{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-top:35px;
-color:#cbd5e1
+display:flex;gap:20px;flex-wrap:wrap;
+margin-top:35px;color:#cbd5e1
 }
-
 .stat{
 background:rgba(15,23,42,.8);
 border:1px solid rgba(255,255,255,.08);
-padding:14px 18px;
-border-radius:16px
+padding:14px 18px;border-radius:16px
 }
 
 section{padding:90px 24px}
-
-.container{
-max-width:1200px;
-margin:auto
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:12px
-}
-
-.section-desc{
-text-align:center;
-color:#94a3b8;
-margin-bottom:45px
-}
-
+.container{max-width:1200px;margin:auto}
+.section-title{text-align:center;font-size:42px;margin-bottom:12px}
+.section-desc{text-align:center;color:#94a3b8;margin-bottom:45px}
 .cards,.planos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:24px
 }
-
 .card,.plano{
 background:#0f172a;
 border:1px solid rgba(255,255,255,.08);
@@ -189,59 +138,27 @@ border-radius:24px;
 padding:30px;
 transition:.25s
 }
-
 .card:hover,.plano:hover{
 transform:translateY(-7px);
 border-color:rgba(56,189,248,.35)
 }
-
-.icon{
-font-size:34px;
-margin-bottom:15px
-}
-
-.card h3,.plano h3{
-font-size:23px;
-margin-bottom:10px
-}
-
-.card p,.plano li,.plano p{
-color:#cbd5e1
-}
-
+.icon{font-size:34px;margin-bottom:15px}
+.card h3,.plano h3{font-size:23px;margin-bottom:10px}
+.card p,.plano li,.plano p{color:#cbd5e1}
 .dark{background:#07111f}
-
-.preco{
-font-size:30px;
-font-weight:900;
-color:#22c55e;
-margin:12px 0
-}
-
-.destaque{
-border-color:rgba(34,197,94,.5)
-}
-
+.preco{font-size:30px;font-weight:900;color:#22c55e;margin:12px 0}
+.destaque{border-color:rgba(34,197,94,.5)}
 ul{padding-left:20px}
 
-.noc{
-background:#0f172a;
-color:#fff
-}
-
+.noc{background:#0f172a;color:#fff}
 .noc-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center
+max-width:1200px;margin:auto;
+display:grid;grid-template-columns:1fr 1fr;
+gap:40px;align-items:center
 }
-
 .noc-box{
 background:#020617;
-padding:18px;
-border-radius:14px;
+padding:18px;border-radius:14px;
 margin-bottom:12px;
 border:1px solid rgba(255,255,255,.08)
 }
@@ -250,149 +167,89 @@ border:1px solid rgba(255,255,255,.08)
 background:linear-gradient(135deg,#022c22,#020617);
 text-align:center
 }
-
 .diagnostico-box{
-max-width:900px;
-margin:auto;
+max-width:900px;margin:auto;
 background:rgba(15,23,42,.9);
 border:1px solid rgba(34,197,94,.35);
 border-radius:28px;
 padding:45px;
 box-shadow:0 25px 80px rgba(34,197,94,.12)
 }
-
-.cta{
-text-align:center;
-background:#020617
-}
-
+.cta{text-align:center;background:#020617}
 footer{
-padding:28px;
-text-align:center;
+padding:28px;text-align:center;
 color:#94a3b8;
 border-top:1px solid rgba(255,255,255,.08)
 }
 
 .chat-laura{
-position:fixed;
-right:24px;
-bottom:24px;
-width:310px;
-background:#fff;
-color:#111;
-border-radius:22px;
-overflow:hidden;
+position:fixed;right:24px;bottom:24px;
+width:310px;background:#fff;color:#111;
+border-radius:22px;overflow:hidden;
 z-index:2000;
 box-shadow:0 25px 80px rgba(0,0,0,.4)
 }
-
 .chat-head{
-background:#0f172a;
-color:#fff;
+background:#0f172a;color:#fff;
 padding:14px;
-display:flex;
-align-items:center;
-justify-content:space-between
+display:flex;align-items:center;justify-content:space-between
 }
-
-.chat-head-left{
-display:flex;
-align-items:center;
-gap:10px
-}
-
+.chat-head-left{display:flex;align-items:center;gap:10px}
 .chat-head img{
-width:46px;
-height:46px;
-border-radius:50%;
-object-fit:cover;
-object-position:center top;
+width:46px;height:46px;border-radius:50%;
+object-fit:cover;object-position:center top;
 border:2px solid #22c55e
 }
-
 .chat-minimize{
-background:none;
-border:none;
-color:white;
-font-size:24px;
-cursor:pointer
+background:none;border:none;color:white;
+font-size:24px;cursor:pointer
 }
-
-.chat-body{
-padding:18px
-}
-
+.chat-body{padding:18px}
 .chat-body p{
 background:#f1f5f9;
-padding:12px;
-border-radius:14px;
-margin-bottom:12px;
-color:#334155
+padding:12px;border-radius:14px;
+margin-bottom:12px;color:#334155
 }
-
 .chat-body a{
-display:block;
-text-align:center;
+display:block;text-align:center;
 border:1px solid #2563eb;
 color:#2563eb;
-padding:10px;
-border-radius:999px;
-margin-top:8px;
-font-weight:700
+padding:10px;border-radius:999px;
+margin-top:8px;font-weight:700
 }
-
 .chat-bubble{
-display:none;
-position:fixed;
-right:24px;
-bottom:24px;
-width:70px;
-height:70px;
-border-radius:50%;
-border:none;
-background:#0f172a;
+display:none;position:fixed;
+right:24px;bottom:24px;
+width:70px;height:70px;border-radius:50%;
+border:none;background:#0f172a;
 box-shadow:0 20px 60px rgba(0,0,0,.35);
-align-items:center;
-justify-content:center;
-cursor:pointer;
-z-index:3000
+align-items:center;justify-content:center;
+cursor:pointer;z-index:3000
+}
+.chat-bubble img{
+width:58px;height:58px;border-radius:50%;
+object-fit:cover;object-position:center top;
+border:2px solid #22c55e
 }
 
-.chat-bubble img{
-width:58px;
-height:58px;
-border-radius:50%;
-object-fit:cover;
-object-position:center top;
-border:2px solid #22c55e
+@media(max-width:1050px){
+.hero-content{grid-template-columns:1fr}
+.laura-area{margin-top:20px;min-height:auto}
+.speech{left:8%;top:35px}
+.laura-img{height:570px}
 }
 
 @media(max-width:850px){
-.hero-content,.noc-grid{
-grid-template-columns:1fr
-}
-
-.menu{
-display:none
-}
-
-.logo-navbar{
-width:76px;
-height:76px
-}
-
+.menu{display:none}
+.logo-navbar{width:76px;height:76px}
+.hero{padding-top:120px}
+h1{font-size:44px}
 .laura-area{
-min-height:auto;
-justify-content:center;
-padding-right:0;
-margin-top:30px
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center
 }
-
-.laura-img{
-height:430px;
-transform:none
-}
-
 .speech{
 position:relative;
 left:auto;
@@ -400,14 +257,18 @@ top:auto;
 margin-bottom:20px;
 max-width:100%
 }
-
-.speech::after{
-display:none
+.speech::after{display:none}
+.laura-img{height:430px}
+.noc-grid{grid-template-columns:1fr}
+.chat-laura{width:280px}
 }
 
-.chat-laura{
-width:280px
-}
+@media(max-width:480px){
+h1{font-size:38px}
+.hero p{font-size:16px}
+.laura-img{height:360px}
+.chat-laura{right:12px;bottom:12px;width:275px}
+.chat-bubble{right:12px;bottom:12px}
 }
 </style>
 </head>
@@ -419,7 +280,6 @@ width:280px
     <a href="#">
       <img src="logo.png" class="logo-navbar" alt="Logo Illuminons IT">
     </a>
-
     <div class="menu">
       <a href="#servicos">Serviços</a>
       <a href="#noc">NOC/COE</a>
@@ -432,7 +292,6 @@ width:280px
 
 <header class="hero">
   <div class="hero-content">
-
     <div>
       <span class="badge">Agência de Automação • Chatbots • Tráfego Pago</span>
 
@@ -450,10 +309,7 @@ width:280px
         <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">
           Diagnóstico gratuito
         </a>
-
-        <a class="btn btn-outline" href="#pacotes">
-          Ver pacotes
-        </a>
+        <a class="btn btn-outline" href="#pacotes">Ver pacotes</a>
       </div>
 
       <div class="stats">
@@ -469,10 +325,8 @@ width:280px
         <strong>Laura 👋</strong><br>
         Posso te ajudar a encontrar oportunidades para o seu negócio.
       </div>
-
       <img src="laura.png" class="laura-img" alt="Laura - Assistente Illuminons IT">
     </div>
-
   </div>
 </header>
 
@@ -482,29 +336,10 @@ width:280px
     <p class="section-desc">Marketing, automação e tecnologia trabalhando juntos.</p>
 
     <div class="cards">
-      <div class="card">
-        <div class="icon">📣</div>
-        <h3>Tráfego Pago</h3>
-        <p>Campanhas no Instagram e Facebook Ads para gerar leads qualificados.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>Chatbots</h3>
-        <p>Atendimento 24h no WhatsApp com respostas inteligentes e qualificação de leads.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚙️</div>
-        <h3>Automação com n8n</h3>
-        <p>Automatizamos processos, integrações e fluxos para ganhar tempo.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔗</div>
-        <h3>Integrações</h3>
-        <p>Conectamos sistemas, APIs, planilhas, CRMs e ferramentas que você já usa.</p>
-      </div>
+      <div class="card"><div class="icon">📣</div><h3>Tráfego Pago</h3><p>Campanhas no Instagram e Facebook Ads para gerar leads qualificados.</p></div>
+      <div class="card"><div class="icon">🤖</div><h3>Chatbots</h3><p>Atendimento 24h no WhatsApp com respostas inteligentes e qualificação de leads.</p></div>
+      <div class="card"><div class="icon">⚙️</div><h3>Automação com n8n</h3><p>Automatizamos processos, integrações e fluxos para ganhar tempo.</p></div>
+      <div class="card"><div class="icon">🔗</div><h3>Integrações</h3><p>Conectamos sistemas, APIs, planilhas, CRMs e ferramentas que você já usa.</p></div>
     </div>
   </div>
 </section>
@@ -513,11 +348,9 @@ width:280px
   <div class="noc-grid">
     <div>
       <h2 class="section-title" style="text-align:left">Monitoramento 24x7 NOC / COE</h2>
-
       <p style="color:#cbd5e1;margin-bottom:25px">
         Operação contínua com observabilidade completa, automação de incidentes e alta disponibilidade.
       </p>
-
       <div class="noc-box">✔ Monitoramento 24x7</div>
       <div class="noc-box">✔ Observabilidade completa</div>
       <div class="noc-box">✔ Automação de incidentes</div>
@@ -536,11 +369,9 @@ width:280px
 <section id="diagnostico" class="diagnostico">
   <div class="diagnostico-box">
     <h2 class="section-title">Diagnóstico gratuito de automação e captação</h2>
-
     <p class="section-desc">
       Analisamos seu atendimento, captação de clientes e processos manuais para identificar oportunidades de automação, tráfego pago e chatbot.
     </p>
-
     <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">
       Quero meu diagnóstico gratuito
     </a>
@@ -555,7 +386,6 @@ width:280px
       <div class="plano">
         <h3>Starter</h3>
         <div class="preco">R$ 900/mês</div>
-
         <ul>
           <li>Gestão básica de tráfego</li>
           <li>Campanhas Instagram/Facebook</li>
@@ -567,7 +397,6 @@ width:280px
       <div class="plano destaque">
         <h3>Growth</h3>
         <div class="preco">R$ 1.800/mês</div>
-
         <ul>
           <li>Tráfego pago estratégico</li>
           <li>Chatbot para WhatsApp</li>
@@ -579,7 +408,6 @@ width:280px
       <div class="plano">
         <h3>Premium</h3>
         <div class="preco">Personalizado</div>
-
         <ul>
           <li>Tráfego + chatbot + automação</li>
           <li>Integrações avançadas</li>
@@ -594,11 +422,9 @@ width:280px
 <section id="contato" class="cta">
   <div class="container">
     <h2 class="section-title">Pronto para levar sua empresa ao próximo nível?</h2>
-
     <p class="section-desc">
       Comece com um diagnóstico gratuito e descubra onde sua empresa pode vender mais e operar melhor.
     </p>
-
     <a class="btn btn-primary" href="https://wa.me/5519992430009?text=Olá,%20vim%20pelo%20site%20da%20Illuminons%20IT%20e%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">
       Quero meu diagnóstico gratuito
     </a>
@@ -609,25 +435,15 @@ width:280px
   <div class="chat-head">
     <div class="chat-head-left">
       <img src="laura-avatar.png" alt="Laura">
-      <div>
-        <strong>Laura</strong><br>
-        <small style="color:#22c55e">● Online</small>
-      </div>
+      <div><strong>Laura</strong><br><small style="color:#22c55e">● Online</small></div>
     </div>
-
     <button class="chat-minimize" onclick="minimizeChat()">−</button>
   </div>
 
   <div class="chat-body">
     <p>Olá! Sou a Laura. Posso te ajudar a identificar oportunidades de automação e captação?</p>
-
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">
-      Quero diagnóstico gratuito
-    </a>
-
-    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20tráfego,%20chatbot%20e%20automação." target="_blank">
-      Saber sobre serviços
-    </a>
+    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20meu%20diagnóstico%20gratuito%20de%20automação%20e%20captação%20de%20clientes." target="_blank">Quero diagnóstico gratuito</a>
+    <a href="https://wa.me/5519992430009?text=Olá,%20quero%20saber%20mais%20sobre%20tráfego,%20chatbot%20e%20automação." target="_blank">Saber sobre serviços</a>
   </div>
 </div>
 

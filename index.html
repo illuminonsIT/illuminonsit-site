@@ -20,38 +20,21 @@ transition:transform .35s ease;
 }
 
 .nav-content{
-max-width:1200px;
-margin:auto;
-padding:14px 24px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+max-width:1200px;margin:auto;padding:14px 24px;
+display:flex;justify-content:space-between;align-items:center
 }
 
 .brand{
-display:flex;
-align-items:center;
-gap:14px;
-font-size:20px;
-font-weight:900;
-letter-spacing:.4px;
+display:flex;align-items:center;gap:14px;
+font-size:20px;font-weight:900;letter-spacing:.4px
 }
 
 .logo-navbar{
-width:72px;
-height:72px;
-border-radius:18px;
-object-fit:cover;
-box-shadow:0 0 35px rgba(56,189,248,.35);
+width:72px;height:72px;border-radius:18px;object-fit:cover;
+box-shadow:0 0 35px rgba(56,189,248,.35)
 }
 
-.menu{
-display:flex;
-gap:28px;
-color:#cbd5e1;
-font-weight:700;
-}
-
+.menu{display:flex;gap:28px;color:#cbd5e1;font-weight:700}
 .menu a:hover{color:#38bdf8}
 
 .hero{
@@ -59,87 +42,80 @@ min-height:100vh;
 padding:150px 24px 70px;
 background:
 radial-gradient(circle at 70% 38%,rgba(0,120,255,.32),transparent 34%),
-linear-gradient(135deg,#020617,#0f172a 60%,#020617);
+linear-gradient(135deg,#020617,#0f172a 60%,#020617)
 }
 
 .hero-content{
-max-width:1200px;
-margin:auto;
+max-width:1200px;margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
-align-items:center;
+align-items:center
+}
+
+.hero-text{
+max-width:620px
 }
 
 .badge{
-display:inline-block;
-padding:8px 16px;
-border-radius:999px;
+display:inline-block;padding:8px 16px;border-radius:999px;
 border:1px solid rgba(56,189,248,.4);
-color:#38bdf8;
-margin-bottom:24px;
-font-weight:700;
+color:#38bdf8;margin-bottom:24px;font-weight:700
 }
 
 h1{
-font-size:clamp(44px,5.6vw,72px);
+font-size:clamp(48px,5.5vw,72px);
 line-height:1.08;
+letter-spacing:-.8px;
 margin-bottom:24px;
-font-weight:900;
+font-weight:900
 }
 
 .gradient{
 background:linear-gradient(90deg,#22c55e,#38bdf8);
 -webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+-webkit-text-fill-color:transparent
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 color:#cbd5e1;
 margin-bottom:32px;
-max-width:650px;
+max-width:560px
 }
 
-.buttons{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
 
 .btn{
 padding:15px 26px;
 border-radius:14px;
 font-weight:800;
 transition:.25s;
-display:inline-block;
+display:inline-block
 }
 
 .btn-primary{
 background:#22c55e;
-box-shadow:0 18px 45px rgba(34,197,94,.28);
+box-shadow:0 18px 45px rgba(34,197,94,.28)
 }
 
 .btn-outline{
 border:1px solid rgba(56,189,248,.55);
-color:#7dd3fc;
+color:#7dd3fc
 }
 
 .btn:hover{transform:translateY(-3px)}
 
 .stats{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-margin-top:34px;
-color:#cbd5e1;
+display:flex;gap:16px;flex-wrap:wrap;
+margin-top:34px;color:#cbd5e1
 }
 
 .stat{
 background:rgba(15,23,42,.8);
 border:1px solid rgba(255,255,255,.08);
 padding:14px 18px;
-border-radius:16px;
+border-radius:16px
 }
 
 .laura-area{
@@ -147,7 +123,7 @@ position:relative;
 display:flex;
 justify-content:flex-end;
 align-items:flex-end;
-min-height:650px;
+min-height:650px
 }
 
 .laura-area::before{
@@ -160,7 +136,7 @@ height:520px;
 background:radial-gradient(circle,rgba(56,189,248,.30),transparent 70%);
 filter:blur(60px);
 z-index:0;
-animation:glowPulse 5s ease-in-out infinite;
+animation:glowPulse 5s ease-in-out infinite
 }
 
 @keyframes glowPulse{
@@ -177,7 +153,7 @@ position:relative;
 z-index:2;
 transform:translateX(20px);
 filter:drop-shadow(0 0 45px rgba(56,189,248,.35));
-animation:lauraFloat 6s ease-in-out infinite;
+animation:lauraFloat 6s ease-in-out infinite
 }
 
 @keyframes lauraFloat{
@@ -187,8 +163,8 @@ animation:lauraFloat 6s ease-in-out infinite;
 
 .speech{
 position:absolute;
-left:30px;
-top:250px;
+left:35px;
+top:195px;
 max-width:360px;
 background:rgba(15,23,42,.96);
 border:1px solid rgba(56,189,248,.45);
@@ -198,7 +174,7 @@ text-align:left;
 box-shadow:0 24px 70px rgba(0,0,0,.42);
 z-index:5;
 backdrop-filter:blur(14px);
-animation:speechFloat 5s ease-in-out infinite;
+animation:speechFloat 5s ease-in-out infinite
 }
 
 @keyframes speechFloat{
@@ -210,17 +186,14 @@ animation:speechFloat 5s ease-in-out infinite;
 content:"";
 position:absolute;
 right:-14px;
-top:62%;
+top:66%;
 transform:translateY(-50%);
 border-width:14px;
 border-style:solid;
-border-color:transparent transparent transparent rgba(15,23,42,.96);
+border-color:transparent transparent transparent rgba(15,23,42,.96)
 }
 
-.speech strong{
-color:#38bdf8;
-font-size:26px;
-}
+.speech strong{color:#38bdf8;font-size:26px}
 
 section{padding:90px 24px}
 .container{max-width:1200px;margin:auto}
@@ -228,19 +201,19 @@ section{padding:90px 24px}
 .section-title{
 text-align:center;
 font-size:42px;
-margin-bottom:12px;
+margin-bottom:12px
 }
 
 .section-desc{
 text-align:center;
 color:#94a3b8;
-margin-bottom:45px;
+margin-bottom:45px
 }
 
 .cards,.planos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:24px;
+gap:24px
 }
 
 .card,.plano{
@@ -248,12 +221,12 @@ background:#0f172a;
 border:1px solid rgba(255,255,255,.08);
 border-radius:24px;
 padding:30px;
-transition:.25s;
+transition:.25s
 }
 
 .card:hover,.plano:hover{
 transform:translateY(-7px);
-border-color:rgba(56,189,248,.35);
+border-color:rgba(56,189,248,.35)
 }
 
 .icon{font-size:34px;margin-bottom:15px}
@@ -264,18 +237,12 @@ border-color:rgba(56,189,248,.35);
 .destaque{border-color:rgba(34,197,94,.5)}
 ul{padding-left:20px}
 
-.noc{
-background:#0f172a;
-color:#fff;
-}
+.noc{background:#0f172a;color:#fff}
 
 .noc-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+max-width:1200px;margin:auto;
+display:grid;grid-template-columns:1fr 1fr;
+gap:40px;align-items:center
 }
 
 .noc-box{
@@ -283,7 +250,7 @@ background:#020617;
 padding:18px;
 border-radius:14px;
 margin-bottom:12px;
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.08)
 }
 
 .cta{text-align:center;background:#020617}
@@ -292,7 +259,7 @@ footer{
 padding:28px;
 text-align:center;
 color:#94a3b8;
-border-top:1px solid rgba(255,255,255,.08);
+border-top:1px solid rgba(255,255,255,.08)
 }
 
 .chat-laura{
@@ -305,7 +272,7 @@ color:#111;
 border-radius:24px;
 overflow:hidden;
 z-index:2000;
-box-shadow:0 25px 90px rgba(0,0,0,.45);
+box-shadow:0 25px 90px rgba(0,0,0,.45)
 }
 
 .chat-head{
@@ -314,19 +281,19 @@ color:#fff;
 padding:15px;
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:space-between
 }
 
 .chat-head-left{
 display:flex;
 align-items:center;
-gap:12px;
+gap:12px
 }
 
 .chat-avatar-wrap{
 position:relative;
 width:50px;
-height:50px;
+height:50px
 }
 
 .chat-avatar-wrap::after{
@@ -339,7 +306,7 @@ height:13px;
 background:#22c55e;
 border:2px solid #0f172a;
 border-radius:50%;
-box-shadow:0 0 12px rgba(34,197,94,.8);
+box-shadow:0 0 12px rgba(34,197,94,.8)
 }
 
 .chat-head img{
@@ -348,13 +315,13 @@ height:50px;
 border-radius:50%;
 object-fit:cover;
 object-position:center top;
-border:2px solid #22c55e;
+border:2px solid #22c55e
 }
 
 .chat-status{
 color:#22c55e;
 font-size:12px;
-font-weight:700;
+font-weight:700
 }
 
 .chat-minimize{
@@ -365,12 +332,12 @@ width:30px;
 height:30px;
 border-radius:999px;
 font-size:22px;
-cursor:pointer;
+cursor:pointer
 }
 
 .chat-body{
 padding:18px;
-background:#fff;
+background:#fff
 }
 
 .chat-message{
@@ -379,7 +346,7 @@ padding:14px;
 border-radius:16px;
 margin-bottom:14px;
 color:#334155;
-line-height:1.5;
+line-height:1.5
 }
 
 .chat-body a{
@@ -391,12 +358,12 @@ padding:11px;
 border-radius:999px;
 margin-top:9px;
 font-weight:800;
-transition:.25s;
+transition:.25s
 }
 
 .chat-body a:hover{
 background:#2563eb;
-color:#fff;
+color:#fff
 }
 
 .chat-bubble{
@@ -414,7 +381,7 @@ cursor:pointer;
 z-index:3000;
 align-items:center;
 justify-content:center;
-animation:pulseBubble 2.2s infinite;
+animation:pulseBubble 2.2s infinite
 }
 
 .chat-bubble img{
@@ -423,7 +390,7 @@ height:60px;
 border-radius:50%;
 object-fit:cover;
 object-position:center top;
-border:2px solid #22c55e;
+border:2px solid #22c55e
 }
 
 @keyframes pulseBubble{
@@ -454,7 +421,7 @@ border:2px solid #22c55e;
   <div class="nav-content">
     <a class="brand" href="#">
       <img src="logo.png" class="logo-navbar" alt="Logo ILLUMINONS IT">
-      <span>ILLUMINONS IT</span>
+    
     </a>
 
     <div class="menu">
@@ -468,7 +435,7 @@ border:2px solid #22c55e;
 
 <header class="hero">
   <div class="hero-content">
-    <div>
+    <div class="hero-text">
       <span class="badge">Agência de Automação • Chatbots • Tráfego Pago</span>
 
       <h1>

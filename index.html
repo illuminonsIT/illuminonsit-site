@@ -20,6 +20,9 @@
 <meta name="twitter:description" content="Automação, IA e tráfego pago para transformar cliques em clientes.">
 <meta name="twitter:image" content="https://illuminonsit.com.br/logo.png">
 <link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,8 +35,8 @@
 </script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{background:#020617;color:#fff;line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 
@@ -45,22 +48,24 @@ a{text-decoration:none;color:inherit}
 .menu a:hover{color:#38bdf8}
 
 .hero{min-height:100vh;padding:150px 24px 70px;background:radial-gradient(circle at 70% 38%,rgba(0,120,255,.32),transparent 34%),linear-gradient(135deg,#020617,#0f172a 60%,#020617)}
-.hero-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hero-text{max-width:620px}
-.badge{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid rgba(56,189,248,.4);color:#38bdf8;margin-bottom:24px;font-weight:700}
+.hero-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center}
+.hero-text{max-width:100%}
+.badge{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid rgba(56,189,248,.4);color:#38bdf8;margin-bottom:32px;font-weight:700;font-size:14px;white-space:nowrap}
 
-.hero-title{font-size:clamp(52px,5.5vw,72px);line-height:1.05;font-weight:900;max-width:560px;letter-spacing:-1px;margin-bottom:24px}
-.gradient{background:linear-gradient(90deg,#22c55e,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-title{font-size:clamp(44px,4.5vw,64px);line-height:1.1;font-weight:900;max-width:100%;letter-spacing:-1px;margin-bottom:30px}
+.gradient{background:linear-gradient(90deg,#22c55e,#38bdf8,#22c55e);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% center}}
 
-.hero p{font-size:18px;color:#cbd5e1;margin-bottom:26px;max-width:560px}
-.hero-highlights{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
-.hero-highlights div{background:rgba(15,23,42,.85);border:1px solid rgba(56,189,248,.22);color:#cbd5e1;padding:12px 16px;border-radius:999px;font-weight:700;box-shadow:0 12px 35px rgba(0,0,0,.18)}
+.hero p{font-size:19px;line-height:1.7;color:#cbd5e1;margin-bottom:36px;max-width:560px}
+.hero-highlights{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:42px}
+.hero-highlights div{background:rgba(15,23,42,.85);border:1px solid rgba(56,189,248,.22);color:#cbd5e1;padding:12px 16px;border-radius:999px;font-weight:700;box-shadow:0 12px 35px rgba(0,0,0,.18);transition:all .3s ease;cursor:default}
+.hero-highlights div:hover{background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.6);transform:translateY(-2px)}
 
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
 .btn{padding:15px 26px;border-radius:14px;font-weight:800;transition:.25s;display:inline-block}
 .btn-primary{background:#22c55e;box-shadow:0 18px 45px rgba(34,197,94,.28)}
 .btn-outline{border:1px solid rgba(56,189,248,.55);color:#7dd3fc}
-.btn:hover{transform:translateY(-3px)}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.15)}
 
 .laura-area{position:relative;display:flex;justify-content:flex-end;align-items:flex-end;min-height:650px}
 .laura-area::before{content:"";position:absolute;right:45px;top:70px;width:520px;height:520px;background:radial-gradient(circle,rgba(56,189,248,.30),transparent 70%);filter:blur(60px);z-index:0;animation:glowPulse 5s ease-in-out infinite}
@@ -71,11 +76,11 @@ a{text-decoration:none;color:inherit}
 
 @keyframes lauraFloat{0%,100%{transform:translateX(20px) translateY(0)}50%{transform:translateX(20px) translateY(-10px)}}
 
-.speech{position:absolute;left:35px;top:195px;max-width:360px;background:rgba(15,23,42,.96);border:1px solid rgba(56,189,248,.45);padding:22px 26px;border-radius:22px;text-align:left;box-shadow:0 24px 70px rgba(0,0,0,.42);z-index:5;backdrop-filter:blur(14px);animation:speechFloat 5s ease-in-out infinite}
+.speech{position:absolute;right:560px;bottom:380px;max-width:340px;background:rgba(15,23,42,.96);border:1px solid rgba(56,189,248,.45);padding:22px 26px;border-radius:22px;text-align:left;box-shadow:0 24px 70px rgba(0,0,0,.42);z-index:5;backdrop-filter:blur(14px);animation:speechFloat 5s ease-in-out infinite}
 
 @keyframes speechFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
-.speech::after{content:"";position:absolute;right:-14px;top:66%;transform:translateY(-50%);border-width:14px;border-style:solid;border-color:transparent transparent transparent rgba(15,23,42,.96)}
+.speech::after{content:"";position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);border-width:14px 14px 0 14px;border-style:solid;border-color:rgba(15,23,42,.96) transparent transparent transparent}
 .speech strong{color:#38bdf8;font-size:26px}
 
 section{padding:90px 24px}
@@ -84,7 +89,7 @@ section{padding:90px 24px}
 .section-desc{text-align:center;color:#94a3b8;margin-bottom:45px}
 .cards,.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
 .card,.plano{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:30px;transition:.25s}
-.card:hover,.plano:hover{transform:translateY(-7px);border-color:rgba(56,189,248,.35)}
+.card:hover,.plano:hover{transform:translateY(-7px);border-color:rgba(56,189,248,.35);box-shadow:0 15px 35px rgba(56,189,248,.1)}
 .icon{font-size:34px;margin-bottom:15px}
 .card h3,.plano h3{font-size:23px;margin-bottom:10px}
 .card p,.plano li,.plano p{color:#cbd5e1}
@@ -95,12 +100,14 @@ ul{padding-left:20px}
 
 .noc{background:#0f172a;color:#fff}
 .noc-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.noc-box{background:#020617;padding:18px;border-radius:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,.08)}
+.noc-box{background:#020617;padding:18px;border-radius:14px;margin-bottom:12px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+.noc-box:hover{border-color:rgba(34,197,94,.4);transform:translateX(5px)}
 
 .cta{text-align:center;background:#020617}
 footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08)}
 
-.chat-laura{position:fixed;right:24px;bottom:24px;width:330px;background:#fff;color:#111;border-radius:24px;overflow:hidden;z-index:2000;box-shadow:0 25px 90px rgba(0,0,0,.45)}
+.chat-laura{display:none;position:fixed;right:24px;bottom:24px;width:330px;background:#fff;color:#111;border-radius:24px;overflow:hidden;z-index:2000;box-shadow:0 25px 90px rgba(0,0,0,.45);animation:slideUp .3s ease-out}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .chat-head{background:linear-gradient(135deg,#0f172a,#111827);color:#fff;padding:15px;display:flex;align-items:center;justify-content:space-between}
 .chat-head-left{display:flex;align-items:center;gap:12px}
 .chat-avatar-wrap{position:relative;width:50px;height:50px}
@@ -112,7 +119,7 @@ footer{padding:28px;text-align:center;color:#94a3b8;border-top:1px solid rgba(25
 .chat-message{background:#f1f5f9;padding:14px;border-radius:16px;margin-bottom:14px;color:#334155;line-height:1.5}
 .chat-body a{display:block;text-align:center;border:1px solid #2563eb;color:#2563eb;padding:11px;border-radius:999px;margin-top:9px;font-weight:800;transition:.25s}
 .chat-body a:hover{background:#2563eb;color:#fff}
-.chat-bubble{display:none;position:fixed;right:24px;bottom:24px;width:74px;height:74px;border-radius:50%;border:none;background:#0f172a;box-shadow:0 20px 60px rgba(0,0,0,.4);cursor:pointer;z-index:3000;align-items:center;justify-content:center;animation:pulseBubble 2.2s infinite}
+.chat-bubble{display:flex;position:fixed;right:24px;bottom:24px;width:74px;height:74px;border-radius:50%;border:none;background:#0f172a;box-shadow:0 20px 60px rgba(0,0,0,.4);cursor:pointer;z-index:3000;align-items:center;justify-content:center;animation:pulseBubble 2.2s infinite}
 .chat-bubble img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #22c55e}
 
 @keyframes pulseBubble{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 18px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
@@ -377,22 +384,24 @@ right:3%
 </section>
 
 <section id="noc" class="noc">
-  <div class="noc-grid">
-    <div>
-      <h2 class="section-title" style="text-align:left">Monitoramento 24x7 NOC / COE</h2>
-      <p style="color:#cbd5e1;margin-bottom:25px">Operação contínua com observabilidade completa, automação de incidentes e alta disponibilidade.</p>
+  <div class="container">
+    <h2 class="section-title">Monitoramento 24x7 NOC / COE</h2>
+    <p class="section-desc">Operação contínua com observabilidade completa, automação de incidentes e alta disponibilidade.</p>
 
-      <div class="noc-box">✔ Monitoramento 24x7</div>
-      <div class="noc-box">✔ Observabilidade completa</div>
-      <div class="noc-box">✔ Automação de incidentes</div>
-      <div class="noc-box">✔ SLA e alta disponibilidade</div>
-    </div>
+    <div class="noc-grid" style="align-items:start">
+      <div>
+        <div class="noc-box">✔ Monitoramento 24x7</div>
+        <div class="noc-box">✔ Observabilidade completa</div>
+        <div class="noc-box">✔ Automação de incidentes</div>
+        <div class="noc-box">✔ SLA e alta disponibilidade</div>
+      </div>
 
-    <div>
-      <div class="noc-box">Disponibilidade Global <b style="float:right;color:#22c55e;">99.98%</b></div>
-      <div class="noc-box">Incidentes críticos <b style="float:right;color:#22c55e;">0</b></div>
-      <div class="noc-box">Tempo médio de resposta <b style="float:right;color:#38bdf8;">&lt; 5 min</b></div>
-      <div class="noc-box">Serviços monitorados <b style="float:right;color:#38bdf8;">24x7</b></div>
+      <div>
+        <div class="noc-box">Disponibilidade Global <b style="float:right;color:#22c55e;">99.98%</b></div>
+        <div class="noc-box">Incidentes críticos <b style="float:right;color:#22c55e;">0</b></div>
+        <div class="noc-box">Tempo médio de resposta <b style="float:right;color:#38bdf8;">&lt; 5 min</b></div>
+        <div class="noc-box">Serviços monitorados <b style="float:right;color:#38bdf8;">24x7</b></div>
+      </div>
     </div>
   </div>
 </section>
@@ -506,19 +515,16 @@ setInterval(() => {
     'Olá! Eu sou a<br><strong>Laura 👋</strong><br>' + messages[i];
 }, 4000);
 
-let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScroll && currentScroll > 80) {
-    navbar.style.transform = "translateY(-100%)";
+  if (window.pageYOffset > 20) {
+    navbar.style.boxShadow = "0 4px 30px rgba(0,0,0,0.4)";
+    navbar.style.background = "rgba(2,6,23,0.98)";
   } else {
-    navbar.style.transform = "translateY(0)";
+    navbar.style.boxShadow = "none";
+    navbar.style.background = "rgba(2,6,23,0.92)";
   }
-
-  lastScroll = currentScroll;
 });
 </script>
 
